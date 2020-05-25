@@ -1,0 +1,75 @@
+.show{
+    /* opacity: 1; */
+    /* transition: all 1s ease-in; */
+    animation: show-item 2s ease-in forwards;
+}
+
+.hide{
+    /* opacity: 0; */
+    /* transition: all 1s ease-in; */
+    animation: hide-item 2s ease-in forwards;
+}
+
+@keyframes hide-item{
+    0%{
+        opacity: 1;
+        color: red;
+    }
+
+    50%{
+        opacity: 0.5;
+        color: green;
+    }
+
+    100%{
+        opacity: 0;
+        color: black;
+    }
+}
+
+@keyframes show-item{
+    0%{
+        opacity: 0;
+        color: red;
+    }
+
+    50%{
+        opacity: 0.5;
+        color: green;
+    }
+
+    100%{
+        opacity: 1;
+        color: black;
+    }
+}
+
+
+
+/************************  CSSTransition **************************/
+
+.fade-enter,.fade-appear{
+    opacity: 0;
+}
+
+.fade-enter-active,.fade-appear-active{
+    opacity: 1;
+    transition: ease 1s;
+}
+
+.fade-enter-done{
+    opacity: 1;
+}
+
+.fade-exit{
+    opacity: 1;
+}
+
+.fade-exit-active{
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+.fade-exit-done{
+    opacity: 0;
+}
